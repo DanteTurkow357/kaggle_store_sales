@@ -15,9 +15,9 @@ train = pd.read_csv("Data/train.csv")
 transactions = pd.read_csv("Data/transactions.csv")
 
 df = train.merge(stores, on = "store_nbr")
-df['month_cat'] = pd.to_datetime(df['date']).dt.month_name()
-df['day_cat'] = pd.to_datetime(df['date']).dt.day_name()
-df['new_years_day'] = np.where((pd.to_datetime(df['date']).dt.month == 1) & ((pd.to_datetime(df['date'])).dt.day == 1), True, False)
+# df['month_cat'] = pd.to_datetime(df['date']).dt.month_name()
+# df['day_cat'] = pd.to_datetime(df['date']).dt.day_name()
+# df['new_years_day'] = np.where((pd.to_datetime(df['date']).dt.month == 1) & ((pd.to_datetime(df['date'])).dt.day == 1), True, False)
 print(df.head())
 print(df.shape)
 
